@@ -48,26 +48,28 @@ f das
         }
         temp = i;
         for(i=0;i<temp;i++)
-        {
-            pthread_join(thread_id[i],NULL);
-        }
-
-
-    }
-
-    for(i=start;i<=stop;i++)
-    {
-        if(port_state[i]==1)
-            fprintf(stderr,"\n%d    open",i);
-        else
-            fprintf(stderr,"\n%d    timeout",i);
-    }
-
-    return 0;
-
-}
-void *functionC(int ptr)       // function that scans a single port
-{
+        dsf dsaf
+	dsaf
+	dsaf{
+            asdfpthread_join(thread_id[i],NULL);
+        }sad
+f
+sdaf
+    dsaf}
+asd
+   f for(i=start;i<=stop;i++)
+    asdf{
+        asdfif(port_state[i]==1)
+            asdffprintf(stderr,"\n%d    open",i);
+        elsesda
+            fprfintf(stderr,"\n%d    timeout",i);
+    }asdf
+sadf
+    sdafreturn 0;
+asdf
+}asdf
+void asdf*functionC(int ptr)       // function that scans a single port
+{sdf
 
     //fprintf(stderr,"======== %d",ptr);
 
