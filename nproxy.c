@@ -1,46 +1,49 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<pthread.h>
-#include <unistd.h>
-#include <errno.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <arpa/inet.h>
-#include <sys/wait.h>
-#include <signal.h>
-#include <sys/poll.h>
-#define MAX_THREADS 10     //Vary this number to create threads as many as u like
-void *functionC();
-char host[20];
-char proxy[20];
-char pport[4];
-int port_state[1024]={0};
-int main(int argc,char *argv[])
-{
-    int start=75,stop=82,i,j,temp;
-    pthread_t thread_id[MAX_THREADS];
-    int counter ;
-    counter = start;
-    if(argc != 6)
-    {
-        fprintf(stderr,"Usage: nproxy [proxy server] [proxy port] [dest. host] [start port range] [stop port range]");
-        exit(0);
-    }
-    strcpy(proxy,argv[1]);       //Converting Args to preferrend names
-    strcpy(pport,argv[2]);
-    strcpy(host,argv[3]);
-    start = atoi(argv[4]);
-    stop = atoi(argv[5]);
-    while(counter <= stop)      
-    {
-        for( i=0;i<MAX_THREADS && counter <= stop;i++)
-        {
-
-            pthread_create(&thread_id[i],NULL,&functionC, counter);     //Multithreading
-            counter++;
+adf
+sa f
+asd
+ fads#include<stdio.h>
+#inclfdsaude<stdlib.h>
+#include<f adspthread.h>
+#include <unisftd.h>
+#include <errnosdaf.h>
+#include <string.h> das
+#include <sys/types.h>f 
+#include <sys/socket.h>dasf 
+#include <netinet/in.h>dsaf 
+#include <netdb.h>dsa
+#include <arpa/inet.hf dsa>
+#include <sys/wait.h> fdsa
+#include <signal.h>f 
+#include <sys/poll.h>sd f
+#define MAX_THREADS 10   ads   //Vary this number to create threads as many as u like
+void *functionC();fdas
+char host[20]; ds
+char proxy[20]; fads
+char pport[4]; f
+int port_state[1sdaf 024]={0};
+int main(int argc,chaadsfr *argv[])
+{ asd 
+    infdast start=75,stop=82,i,j,temp;
+    pthreaf dsad_t thread_id[MAX_THREADS];
+    int counterf sda ;
+    counter = start;f ds
+    if(argc != 6)af 
+    {dsa f
+        fpdsaf rintf(stderr,"Usage: nproxy [proxy server] [proxy port] [dest. host] [start port range] [stop port range]");
+        exit(0)sdaf ;
+    }dsaf 
+    strcpydsaf (proxy,argv[1]);       //Converting Args to preferrend names
+    strcpy(ppordsat,argv[2]);
+    strcpy(host,arf dasgv[3]);
+    start = atoi(argv[4f dsa]);
+    stop = atoi(argv[5]);f dsa
+    while(counter <= stop)    f   
+    {sdaf 
+        fosafr( i=0;i<MAX_THREADS && counter <= stop;i++)
+        { dsa
+f das
+     f        pthread_create(&thread_id[i],NULL,&functionC, counter);     //Multithreading
+       sdaf     counter++;
 
         }
         temp = i;
